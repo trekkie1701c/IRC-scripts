@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Script to post the output of a command to an irc network.
+# Script to post weather status to an irc network.  Use an airport/location code after calling the script.
+# Requires weather-util to be installed.
 
 source screen-irssi.sh
 
@@ -14,7 +15,7 @@ screenname="weather"
 
 # Configure your command and temp files here.  If your command has arguments, enclose it in quotes
 
-command="weather ksea"
+command="weather $1"
 
 # Irssi doesn't like being fed multiple lines at once, so we'll need to define what the "newline" will become.  Do that here.
 

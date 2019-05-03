@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source shutdown.sh #For ZNC's shutdown tasks
+
+start_tasks() { #Stuff to do during startup.  Honestly, it's probably better to make them their own service, but I figured I'd leave this here just in case it's needed.
+	sleep 0
+}
+
+stop_tasks() { #Stuff to do during shutdown.  For example - and how it's used here - warning users that the system's going down.
+	shutdown_warning 5
+}

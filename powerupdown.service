@@ -1,0 +1,13 @@
+[Unit]
+Description=Notification script for powerup/powerdown
+After=znc.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-powerupdown.sh start
+ExecStop=-powerupdown.sh stop
+TimeoutSec=600
+
+[Install]
+WantedBy=multi-user.target
